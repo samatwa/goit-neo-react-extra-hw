@@ -35,19 +35,6 @@ const ConfirmModal = ({ message, onConfirm, onCancel, open }) => {
         }}
       >
         <Button
-          onClick={onCancel}
-          variant="contained"
-          sx={{
-            backgroundColor: '#9e9e9e',
-            color: 'black',
-            '&:hover': {
-              backgroundColor: 'red',
-            },
-          }}
-        >
-          No
-        </Button>
-        <Button
           onClick={onConfirm}
           variant="contained"
           sx={{
@@ -59,6 +46,19 @@ const ConfirmModal = ({ message, onConfirm, onCancel, open }) => {
           }}
         >
           Yes
+        </Button>
+        <Button
+          onClick={onCancel}
+          variant="contained"
+          sx={{
+            backgroundColor: '#9e9e9e',
+            color: 'black',
+            '&:hover': {
+              backgroundColor: 'red',
+            },
+          }}
+        >
+          No
         </Button>
       </DialogActions>
     </Dialog>
