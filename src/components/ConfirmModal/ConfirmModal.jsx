@@ -5,7 +5,6 @@ import {
   DialogContentText,
   Button,
 } from '@mui/material';
-import css from './ConfirmModal.module.css';
 
 const ConfirmModal = ({ message, onConfirm, onCancel, open }) => {
   return (
@@ -18,23 +17,46 @@ const ConfirmModal = ({ message, onConfirm, onCancel, open }) => {
       <DialogContent>
         <DialogContentText
           id="confirm-dialog-description"
-          className={css.dialogContentText}
+          sx={{
+            fontSize: '18px',
+            fontWeight: 'bold',
+            color: '#333',
+          }}
         >
           {message}
         </DialogContentText>
       </DialogContent>
-      <DialogActions className={css.dialogButtons}>
+      <DialogActions
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          mb: 2,
+          gap: 2,
+        }}
+      >
         <Button
           onClick={onCancel}
-          className={css.cancelButton}
           variant="contained"
+          sx={{
+            backgroundColor: '#9e9e9e',
+            color: 'black',
+            '&:hover': {
+              backgroundColor: 'red',
+            },
+          }}
         >
           No
         </Button>
         <Button
           onClick={onConfirm}
-          className={css.confirmButton}
           variant="contained"
+          sx={{
+            backgroundColor: '#9e9e9e',
+            color: 'black',
+            '&:hover': {
+              backgroundColor: 'red',
+            },
+          }}
         >
           Yes
         </Button>
@@ -44,4 +66,3 @@ const ConfirmModal = ({ message, onConfirm, onCancel, open }) => {
 };
 
 export default ConfirmModal;
-
