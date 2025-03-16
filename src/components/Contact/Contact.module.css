@@ -27,10 +27,12 @@
   font-size: 20px;
 }
 
-.deleteBtn {
+.deleteBtn, .editBtn {
+  width: 70px;
   color: black;
   border: 2px solid #ccc;
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 5px;
 }
+

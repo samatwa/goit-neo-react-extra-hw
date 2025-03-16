@@ -5,9 +5,11 @@
   margin: 20px 0;
 }
 
-.searchBox input {
-  max-width: 300px;
-  padding: 10px;
-  border: 1px solid #ccc;
+.inputField {
+  max-width: 420px;
+}
+
+.inputField .MuiOutlinedInput-root {
+  padding: 0;
   border-radius: 5px;
 }
